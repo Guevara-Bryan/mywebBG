@@ -1,0 +1,18 @@
+{% extends 'the_site/frame.html' %}
+{% load static %}
+{% block content %}
+    <!-- Write the Portfolio code here -->
+    <h1>Portfolio - Still working</h1>
+    <div class='projects'>
+        <ul>
+            {% for project in projects_list %}
+            <li>
+                <h2>{{ project.project_name }}</h2>
+                <img src="{% static project.image %}" alt="Project image">
+                <p>{{ project.short_description }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+        
+{% endblock content %}
