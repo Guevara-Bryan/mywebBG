@@ -1,0 +1,24 @@
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.project{
+    width: 80%;
+    margin:auto;
+    margin-bottom: 1em;
+    list-style:none;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.project > img{
+    width: 150px;
+    margin: auto;
+}
+
+
+.nav_bar{
+    
+}

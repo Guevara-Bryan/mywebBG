@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'the_site/style.css' %}">
+    <link rel="stylesheet" href="{% static 'the_site/styles.css' %}">
     {% if title %}
         <title>{{ title }}</title>
     {% else %}
@@ -13,17 +13,20 @@
     {% endif %}
 </head>
 <body>
-    <header class="nav_bar">
-        <ul>
-            {% for item in menu_list %}
-                <li><a href="{% url item.url %}">{{ item.item_name }}</a></li>
-            {% endfor %}
-        </ul>
-    </header>
+    <div class="container">
 
+        <header class="nav_bar">
+            <ul>
+                {% for item in menu_list %}
+                    <li class="nav_item"><a href="{% url item.url %}">{{ item.item_name }}</a></li>
+                {% endfor %}
+            </ul>
+        </header>
+    
+        <div class="content">
+            {% block content %} {% endblock %}
+        </div>
 
-    <div class="content">
-        {% block content %} {% endblock %}
     </div>
     
 </body>
